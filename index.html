@@ -1,11 +1,68 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    
+<body class="bg-slate-800 text-slate-100 min-h-screen">
+
+  <nav class="bg-slate-900 px-4 py-3 flex justify-between">
+    <div class="max-w-5xl mx-auto flex items-center justify-between">
+      <a href="#" class="font-bold text-pink-400 text-xl">JSD3</a>
+      <button id="menu-btn" class="md:hidden text-slate-100 text-2xl">&#9776;</button>
+      <ul class="hidden md:flex gap-6 text-sm text-slate-300">
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#live">Live</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <ul id="mobile-menu" class="hidden flex-col gap-3 px-4 pb-4 text-slate-300 md:hidden">
+    <li><a href="#faq">FAQ</a></li>
+    <li><a href="#live">Live</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+
+  <main class="max-w-5xl mx-auto px-4 py-10 space-y-16">
+
+    <section id="faq">
+      <h2 class="text-2xl font-bold text-pink-400 mb-4">Questions Frequentes</h2>
+      <div class="space-y-2" id="faq-list">
+        <div class="faq-item bg-slate-800 rounded-xl overflow-hidden">
+          <button class="faq-question w-full text-left px-4 py-3 flex justify-between">
+            Votre premiere question
+            <span class="faq-icon text-pink-400">+</span>
+          </button>
+          <div class="faq-answer hidden px-4 pb-4 text-sm text-slate-400">
+            Votre reponse ici.
+          </div>
+        </div>
+        <!-- ... ajouter 2 autres .faq-item avec la meme structure ... -->
+      </div>
+    </section>
+
+    <section id="live" class="text-center">
+      <h2 class="text-2xl font-bold text-pink-400 mb-4">Donnees en Direct</h2>
+      <button id="fetch-btn" class="bg-pink-600 text-white px-4 py-2 rounded-lg text-sm">Charger</button>
+      <p id="fetch-box" class="mt-4 text-slate-300 italic"></p>
+    </section>
+
+    <section id="contact">
+      <h2 class="text-2xl font-bold text-pink-400 mb-4">Contact</h2>
+      <form id="contact-form" class="bg-slate-800 rounded-lg p-4 flex gap-3">
+        <input id="contact-email" type="text" required placeholder="vous@exemple.com" class="flex-1 bg-slate-900 rounded-lg px-3 py-2 text-sm" />
+        <button type="submit" class="bg-pink-600 text-white px-4 py-2 rounded-lg text-sm">Envoyer</button>
+      </form>
+      <p id="form-message" class="mt-2 text-sm"></p>
+    </section>
+
+  </main>
+
+  <button id="back-to-top" class="hidden fixed bottom-4 right-4 bg-pink-600 text-white w-10 h-10 rounded-full">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>  
 </body>
 </html>
